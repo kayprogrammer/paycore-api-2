@@ -105,7 +105,7 @@ GEM
       traces (~> 0.10)
     async-http-cache (0.4.6)
       async-http (~> 0.56)
-    async-pool (0.11.1)
+    async-pool (0.11.2)
       async (>= 2.0)
     async-service (0.20.1)
       async
@@ -152,7 +152,7 @@ GEM
       railties (>= 6.1.0)
     faker (3.6.0)
       i18n (>= 1.8.11, < 2)
-    falcon (0.54.2)
+    falcon (0.54.3)
       async
       async-container (~> 0.20)
       async-container-supervisor (~> 0.6)
@@ -178,7 +178,7 @@ GEM
       concurrent-ruby (~> 1.0)
     io-console (0.8.2)
     io-endpoint (0.17.2)
-    io-event (1.14.2)
+    io-event (1.14.3)
     io-stream (0.11.1)
     irb (1.17.0)
       pp (>= 0.6.0)
