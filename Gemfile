@@ -25,7 +25,7 @@ gem "solid_cache"
 gem "solid_cable"
 
 # Pagination
-gem "pagy", "~> 9.3"
+gem "pagy", "~> 43.3"
 
 # Boot time optimization
 gem "bootsnap", require: false
