@@ -1,0 +1,9 @@
+# config/recurring.yml
+production:
+  refresh_exchange_rates:
+    class: Wallets::RefreshRatesJob
+    schedule: "every 6 hours"
+development:
+  refresh_exchange_rates:
+    class: Wallets::RefreshRatesJob
+    schedule: "every 6 hours"

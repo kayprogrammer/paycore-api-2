@@ -11,10 +11,17 @@ class ApplicationController < ActionController::API
 
   def authenticate_user!
     header = request.headers["Authorization"]
-    token = header&.split(" ")&.last
+    token  = header&.split(" ")&.last
     payload = Common::Utils::JwtService.decode(token)
-    @current_user = Accounts::Models::User.find(payload[:user_id])
-  rescue JWT::DecodeError, ActiveRecord::RecordNotFound
+    user = Accounts::Models::User.active.find_by(id: payload[:user_id])
+
+    # Check the token is still the one we have on record (revocation check)
+    unless user && user.access == token
+      return render_error(message: "Unauthorized", status: :unauthorized)
+    end
+
+    @current_user = user
+  rescue JWT::DecodeError, JWT::ExpiredSignature
     render_error(message: "Unauthorized", status: :unauthorized)
   end
 

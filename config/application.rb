@@ -27,6 +27,10 @@ module PaycoreApi2
 
     config.api_only = true
 
+    # Enable multipart form data parsing for file uploads (avatars, etc.)
+    config.middleware.use ActionDispatch::Flash
+    config.middleware.use Rack::MethodOverride
+
     # Use UUID as primary key type by default (requires pgcrypto extension)
     config.generators do |g|
       g.orm :active_record, primary_key_type: :uuid
