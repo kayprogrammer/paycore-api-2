@@ -12,7 +12,7 @@ gem "jwt", "~> 2.9"
 gem "googleauth"           # Google OAuth token validation
 
 # Email (resend.com — ActionMailer-compatible)
-gem "resend", "~> 0.12"
+gem "resend", "~> 1.0"
 
 # CORS
 gem "rack-cors"
