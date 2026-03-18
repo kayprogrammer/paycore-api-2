@@ -299,7 +299,10 @@ GEM
     openssl (4.0.1)
     os (1.1.4)
     ostruct (0.6.3)
-    pagy (9.4.0)
+    pagy (43.4.0)
+      json
+      uri
+      yaml
     parallel (1.27.0)
     parser (3.3.10.2)
       ast (~> 2.4.1)
@@ -500,6 +503,7 @@ GEM
       base64
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    yaml (0.4.0)
     zeitwerk (2.7.5)
 
 PLATFORMS
@@ -527,7 +531,7 @@ DEPENDENCIES
   jwt (~> 2.9)
   kamal
   letter_opener
-  pagy (~> 9.3)
+  pagy (~> 43.4)
   pg (~> 1.1)
   rack-attack
   rack-cors
