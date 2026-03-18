@@ -387,7 +387,7 @@ GEM
     regexp_parser (2.11.3)
     reline (0.6.3)
       io-console (~> 0.5)
-    resend (0.27.0)
+    resend (1.0.1)
       httparty (>= 0.21.0)
     rspec-core (3.13.6)
       rspec-support (~> 3.13.0)
@@ -532,7 +532,7 @@ DEPENDENCIES
   rack-attack
   rack-cors
   rails (~> 8.1.2)
-  resend (~> 0.12)
+  resend (~> 1.0)
   rspec-rails (~> 7.1)
   rswag-api
   rswag-specs
